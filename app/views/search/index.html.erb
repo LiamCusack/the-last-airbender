@@ -1,0 +1,18 @@
+<h1><%= params[:nation] %>'s members</h1>
+
+<ul><h3>
+  <% @members.each do |member| %>
+  <li>
+    <%= image_tag(member.image) %>
+    <%= member.name %><br>
+    <% member.allies.each do |ally| %>
+      <%= ally %>,
+    <% end %><br>
+    <% member.enemies.each do |enemy| %>
+      <%= enemy %>,
+    <% end %><br>
+    <% member.affiliation.each do |afil| %>
+      <%= afil %>,
+    <% end %>
+  </li>
+</h3></ul>

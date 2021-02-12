@@ -7,7 +7,9 @@ class SearchFacade
   private
 
   def self.create_members(members)
-    members.map do |member|
+    binding.pry
+    members.each do |member|
       NationMember.new(member)
+    end
   end
 end
